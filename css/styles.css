@@ -298,6 +298,7 @@ button{
 
 }
 .mobile-menu-address-link{
+    font-style: normal;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: block;
     font-weight: 500;
@@ -369,7 +370,6 @@ button{
     padding: 82px 0;
     margin: 0 auto;
     max-width: 320px;
-    min-height: 432px;
     
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
@@ -389,9 +389,8 @@ button{
         }
 
 .page-title {
-    margin: 0 auto 48px auto;
-    max-width: 496px;
-    font-weight: 216px;
+    margin: 0 auto 72px auto;
+    max-width: 216px;
     font-size: 36px;
     line-height: 1.1;
     letter-spacing: 0.02em;
@@ -433,6 +432,13 @@ button{
                     rgba(46, 47, 66, 0.7)),
                 url(../images/Dark-bg-tablet1x.jpg);
     }
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),(min-resolution: 192dpi) and (min-width: 768px) {
+    .page {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                        rgba(46, 47, 66, 0.7)),
+                    url(../images/Dark-bg-tablet2x.jpg);
+            }
+        }
 
     .page-title {
         font-size: 56px;
@@ -440,26 +446,26 @@ button{
         margin: 0 auto 36px auto;
     }
 }
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
-(min-resolution: 192dpi) and (min-width: 768px) {
-    .hero {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)),
-                url(../images/Dark-bg-tablet2x.jpg);
-    }
-         }
+
 
 
         
  @media screen and (min-width: 1158px) {
     .page {
         padding: 188px 0;
-        min-height: 300px;
         max-width: 1440px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                     rgba(46, 47, 66, 0.7)),
                 url(../images/dark-bg-dekstop1x.jpg);
     }
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1158px),
+(min-resolution: 192dpi) and (min-width: 1158px) {
+    .page {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/dark-bg-dekstop2x.jpg);
+    }
+}
 
     .page-title {
         margin: 0 auto 48px auto;
@@ -470,14 +476,7 @@ button{
         }
 
 }
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 1158px),
-(min-resolution: 192dpi) and (min-width: 1158px) {
-    .hero {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)),
-                 url(../images/dark-bg-dekstop2x.jpg);
-    }
-}
+
 /* Container Benefits */
 
 .container-benefits {
@@ -519,10 +518,15 @@ button{
         flex-direction: row;
         flex-wrap: wrap;
         gap: 24px;
+        row-gap: 72px;
     }
 
     .list {
         width: calc((100% - 24px) / 2);
+    }
+    .benefits{
+        text-align: left;
+
     }
 }
 
@@ -619,7 +623,7 @@ button{
     background-color: #FFFFFF
 }
 .text-subtitle-team {
-    text-align: center;
+    padding-bottom: 8px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -962,11 +966,11 @@ button{
     .container-footer{
         flex-direction: row;
         flex-wrap: wrap;
-        column-gap: 24px;
-        justify-content: center;
+        gap: 72px 24px;
+        padding: 0 108px;
     }
     .logo-text {
-            margin-right: 24px;
+            margin: 0px;
             text-align: left;
         }
     .footer{
@@ -988,9 +992,11 @@ button{
         text-align: left;
     }
     .box-input{
-        margin: 0 auto;
-        margin-left: 108px;
+        margin: 0;
 
+    }
+    .email-input{
+        width: 264px;
     }
     
 }
@@ -1000,6 +1006,8 @@ button{
         align-items: baseline;
         flex-direction: row;
         flex-wrap: nowrap;
+        padding: 0 15px;
+        gap: 0;
             
     }
     .footer {
@@ -1019,7 +1027,7 @@ button{
             background-color: #31D0AA;
         }
     .box-input {
-            margin-left: 80px;
+            margin-left: auto;
         }
     .text-input{
         margin-bottom: 16px;
@@ -1051,7 +1059,12 @@ button{
     .btn-input:hover,
     .btn-input:focus {
             background-color: #404BBF;
+            
         }
+    .logo-text{
+        margin-right: 120px;
+
+    }
            
  }
 
